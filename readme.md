@@ -1,6 +1,9 @@
 # Restful CRUD + Image Upload
 ## Online Demo - https://restful-fastapi-crud.herokuapp.com/docs
 
+username: rizdar
+password: password
+
 - /blogs (get, post) (needs to be authenticated)
 -- /{id} (put, delete, get) (needs to be authenticated)
 - /users (post)
