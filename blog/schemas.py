@@ -15,6 +15,12 @@ class User(BaseModel):
     username: str
     password: str
 
+class Author(BaseModel):
+    name: str
+
+    class Config():
+        orm_mode = True
+
 class UserResponse(BaseModel):
     name: str
     username: str
@@ -26,7 +32,7 @@ class UserResponse(BaseModel):
 class BlogResponse(BaseModel):
     title: str
     content: str
-    author: UserResponse = None
+    author: Author
     
     class Config():
         orm_mode = True

@@ -18,7 +18,7 @@ get_db = database.get_db
 def all(db: Session = Depends(get_db), current_user: schemas.User = Depends(oauth2.get_current_user)):
     return blog.get_all(db)
 
-@router.get("/{id}", status_code=status.HTTP_200_OK, response_model=schemas.BlogResponse)
+@router.get("/{id}", status_code=status.HTTP_200_OK, response_model=schemas.Blog)
 def show(id: int, db: Session = Depends(get_db), current_user: schemas.User = Depends(oauth2.get_current_user)):
     return blog.read(db, id=id)
 
